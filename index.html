@@ -1,13 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tic-tack-joe</title>
+    <title>Tic-Tack-Joe</title>
+    <meta
+      name="description"
+      content="Boter, kaas en eieren voor twee spelers"
+    />
+    <meta name="theme-color" content="#333333" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
   </head>
   <body>
-    <div id="app"></div>
+    <canvas id="slingers"></canvas>
+    <div id="scorebord">
+      <h2>Scorebord</h2>
+      <div class="punten-rij" id="rij-speler1">
+        <span id="naam-speler1">Speler 1</span>
+        <span id="punten-speler1">0</span>
+      </div>
+      <div class="punten-rij" id="rij-speler2">
+        <span id="naam-speler2">Speler 2</span>
+        <span id="punten-speler2">0</span>
+      </div>
+      <p id="leider-tekst"></p>
+    </div>
+    <div id="app">
+      <div id="status">
+        <p id="beurt">De beurt is aan: <span id="speler"></span></p>
+        <div id="uitslag" class="verborgen">
+          <p id="uitslag-tekst"></p>
+          <button id="herstart-knop">🔄 Opnieuw spelen</button>
+        </div>
+      </div>
+      <div id="bord">
+        <button class="vierkant" id="h1v1"></button>
+        <button class="vierkant" id="h1v2"></button>
+        <button class="vierkant" id="h1v3"></button>
+        <button class="vierkant" id="h2v1"></button>
+        <button class="vierkant" id="h2v2"></button>
+        <button class="vierkant" id="h2v3"></button>
+        <button class="vierkant" id="h3v1"></button>
+        <button class="vierkant" id="h3v2"></button>
+        <button class="vierkant" id="h3v3"></button>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
